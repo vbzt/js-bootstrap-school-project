@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">{{data.titulo}}</h2>
+      <p class="card-text w-100">{{data.descricao}}</p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-subtitle mb-2 text-muted">Área:</h3>
+      <h4 class="card-text w-100">{{data.area}}</h4>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-subtitle mb-2 text-muted">Autor:</h3>
+      <h4 class="card-text w-100">{{data.autor}}</h4>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-subtitle mb-2 text-muted">Data:</h3>
+      <h4 class="card-text w-100">{{data.data}}</h4>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-subtitle mb-2 text-muted">Variáveis:</h3>
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          {{#each data.variaveis}}
+            <li class="list-group-item">
+              <h4 class="card-title">{{this.nome}}</h4>
+              <p class="card-text">{{this.descricao}}</p>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

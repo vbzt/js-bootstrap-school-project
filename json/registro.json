@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "titulo": "Experimento de Mendel sobre Hereditariedade",
+    "descricao": "Gregor Mendel realizou experimentos com ervilhas para estudar a hereditariedade. Ele investigou a cor das flores das ervilhas e a textura das sementes como variáveis, contribuindo significativamente para o entendimento dos princípios básicos da genética.",
+    "area": "Biologia",
+    "autor": "edilson capetinha",
+    "data": "1865",
+    "variaveis": [
+      {
+        "nome": "Cor da flor",
+        "descricao": "Cor das flores das ervilhas."
+      },
+      {
+        "nome": "Textura da semente",
+        "descricao": "Textura das sementes das ervilhas."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Experimento de Cavendish para Determinar a Constante Gravitacional",
+    "descricao": "Henry Cavendish conduziu experimentos para calcular a constante gravitacional entre massas. Ele investigou a força de atração e a distância entre as massas como variáveis, estabelecendo uma medida precisa da gravitação universal.",
+    "area": "Física",
+    "autor": "adailton cabrunco",
+    "data": "1798",
+    "variaveis": [
+      {
+        "nome": "Força de Atração",
+        "descricao": "Força de atração entre duas massas."
+      },
+      {
+        "nome": "Distância entre as massas",
+        "descricao": "Distância entre as duas massas no experimento."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Experimento de Lavoisier sobre a Combustão",
+    "descricao": "Antoine Lavoisier realizou experimentos para estudar a combustão. Ele investigou a quantidade de gás produzido e a massa do reagente como variáveis, fornecendo insights cruciais sobre os processos químicos envolvidos na combustão.",
+    "area": "Química",
+    "autor": "adagomir pitongo",
+    "data": "1772",
+    "variaveis": [
+      {
+        "nome": "Gás produzido",
+        "descricao": "Quantidade de gás produzido durante a combustão."
+      },
+      {
+        "nome": "Massa do reagente",
+        "descricao": "Massa do reagente antes da combustão."
+      }
+    ]
+  }
+]

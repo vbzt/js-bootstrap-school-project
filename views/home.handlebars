@@ -1,0 +1,20 @@
+  <div class="container">
+    <h1 class = 'text-center'>Experimentos cadastrados</h1>
+    <div class="container d-flex flex-wrap flex-column justify-content-start">
+      {{#each experimento}}
+        <div class="item mb-3 mt-3 w-5 homeCard ">
+          <h4>{{this.titulo}}</h4>
+          <p class = 'text-truncate w-10'>{{this.descricao}}</p>
+          <p>Feito por: {{this.autor}}</p>
+          <p>Área: {{this.area}}</p>
+          <p>Data: {{this.data}}</p>
+          <div class="actions">
+            <a href="/experimento/{{this.id}}" class="btn btn-primary">Ver detalhes</a>
+            <form action="/experimento/delete/{{this.id}}" method="post" class="d-inline">
+              <input type="submit" value="Excluir" class="btn btn-danger delete-btn">
+            </form>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
