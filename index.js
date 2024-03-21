@@ -24,10 +24,6 @@ app.get('/', async (req, res) =>{
   res.render('home', { experimento })
 })
 
-app.listen(3002, () => {
-  console.log('>> Server on')
-})
-
 app.get('/experimento/:id', async (req, res) => {
   const id = req.params.id
   const json = await readJSON('registro.json')
@@ -44,6 +40,24 @@ app.post('/experimento/delete/:id', async (req, res) => {
   await updateJSON(newJSON)
   res.redirect('/')
 } )
+
+app.get('/create', (req, res) => { 
+
+  res.render('register')
+})
+
+app.post('/experimento/create', async (req, res) => {
+  const id = req.body.id 
+  const title = req.body.title 
+  
+})
+
+app.listen(3002, () => {
+  console.log('>> Server on')
+})
+
+
+
 
 
 function findData(data, id){

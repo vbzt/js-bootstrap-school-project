@@ -14,3 +14,13 @@ nav ul{
 .homeCard p{ 
   max-width:  450px;
 }
+
+.form{ 
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
+input[type = 'submti'], button{
+  cursor: pointer;
+}
