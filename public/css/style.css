@@ -21,6 +21,20 @@ nav ul{
   gap: 1vw;
 }
 
+.variaveis{ 
+  display: flex;
+  gap: 1vw;
+}
+
+.form-group{
+  width: 100%;
+}
+
+.form-group input{
+  width: 100%;
+}
+
+
 input[type = 'submti'], button{
   cursor: pointer;
 }

@@ -1,5 +1,7 @@
+const { create } = require('domain')
 const express = require('express')
 const exphbs = require('express-handlebars')
+const { json } = require('express/lib/response')
 const fs = require('fs').promises
 const path = require('path')
 
@@ -42,18 +44,38 @@ app.post('/experimento/delete/:id', async (req, res) => {
 } )
 
 app.get('/create', (req, res) => { 
-
   res.render('register')
 })
 
 app.post('/experimento/create', async (req, res) => {
-  const id = req.body.id 
-  const title = req.body.title 
-  
+  let id = req.body.id 
+  id = await createId(id)
+
+  const titulo = req.body.title 
+  const descricao = req.body.description
+  const area = req.body.area
+  const autor = req.body.author
+  const data = req.body.date
+
+  const varName1 = req.body.varName
+  const varDesc1 = req.body.varDesc
+
+  const varName2 = req.body.varName2
+  const varDesc2 = req.body.varDesc2  
+
+
+  const variaveis = [ { nome: varName1, descricao: varDesc1 }, { nome: varName2, descricao: varDesc2 } ]
+  const newExperiement = { id, titulo, descricao, area, autor, data, variaveis }
+
+  const json = await readJSON('registro.json')
+  json.push(newExperiement)
+  updateJSON(json)
+  res.redirect('/')
 })
 
+
 app.listen(3002, () => {
-  console.log('>> Server on')
+  console.log('>> server on')
 })
 
 
@@ -73,6 +95,22 @@ function removeData(json, id){
   return json
 
 }
+
+async function createId(id){ 
+  id = parseInt(id)
+  const json = await readJSON('registro.json')
+  for(el of json){ 
+    if(id == el.id){
+      ++id
+      return createId(id)
+    }
+   
+  };
+  console.log('>> new id ' + id)
+  return id
+  }
+
+
 
 
 async function readJSON(file) {
