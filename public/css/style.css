@@ -38,3 +38,7 @@ nav ul{
 input[type = 'submti'], button{
   cursor: pointer;
 }
+
+.filterForm{ 
+  display: flex;
+}

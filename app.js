@@ -20,8 +20,7 @@ app.use(express.static('public'))
 
 
 
-app.get('/', async (req, res) =>{
-
+app.get('/', async (req, res) =>{ 
   const experimento = await readJSON('registro.json')
   res.render('home', { experimento })
 })
@@ -73,6 +72,16 @@ app.post('/experimento/create', async (req, res) => {
   res.redirect('/')
 })
 
+app.post('/filter', async (req, res) => {
+  const filter = req.body.filter;
+
+  const json = await readJSON('registro.json');
+  const newJson = json.filter(experimento => Object.values(experimento).includes(filter));
+
+
+  res.render('home', { experimento: newJson });
+});
+
 
 app.listen(3002, () => {
   console.log('>> server on')
@@ -97,7 +106,6 @@ function removeData(json, id){
 }
 
 async function createId(id){ 
-  id = parseInt(id)
   const json = await readJSON('registro.json')
   for(el of json){ 
     if(id == el.id){

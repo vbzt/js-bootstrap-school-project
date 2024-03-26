@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "titulo": "Experimento de Mendel sobre Hereditariedade",
     "descricao": "Gregor Mendel realizou experimentos com ervilhas para estudar a hereditariedade. Ele investigou a cor das flores das ervilhas e a textura das sementes como variáveis, contribuindo significativamente para o entendimento dos princípios básicos da genética.",
     "area": "Biologia",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": "2",
     "titulo": "Experimento de Cavendish para Determinar a Constante Gravitacional",
     "descricao": "Henry Cavendish conduziu experimentos para calcular a constante gravitacional entre massas. Ele investigou a força de atração e a distância entre as massas como variáveis, estabelecendo uma medida precisa da gravitação universal.",
     "area": "Física",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": "3",
     "titulo": "Experimento de Lavoisier sobre a Combustão",
     "descricao": "Antoine Lavoisier realizou experimentos para estudar a combustão. Ele investigou a quantidade de gás produzido e a massa do reagente como variáveis, fornecendo insights cruciais sobre os processos químicos envolvidos na combustão.",
     "area": "Química",
